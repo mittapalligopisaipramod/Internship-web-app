@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Temperature calculator </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-4.5.0.min.css" />
+    <style>
+        .box{
+            width: 29px;
+        }
+        .box2{
+            width: 190px;
+        }
+        .car{
+            margin-left: 30px;
+        }
+        .card{
+            border-style: solid;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .button{
+            width: 280px;
+            
+        }
+        .main-heading{
+            text-align: center;
+        }
+        .card{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<body>
+    <div class="card">
+        <h1 class="main-heading"> Temperature calculator </h1>
+        <form class="p-form p-form--inline">
+            <div class="p-form__group">
+              <div class="p-form__control">
+                <div class="d-flex flex-row">
+                    <div class="data">
+                        <p for="username-inline" class="p-form__label"> From: </p>
+                        <select name="exampleSelect" class="box2" id="framework2">
+                            <option value="" disabled="disabled" selected="">Select an option</option>
+                            <option value="forenhiet"> Forenhiet </option>
+                            <option value="kelvin"> Kelvin </option>
+                            <option value="celcius"> Celcius </option>
+                        </select>
+                    </div>
+                    <div class="car">
+                        <p for="username-inline" class="p-form__label"> To: </p>
+                        <select name="exampleSelect" class="box2" id="framework">
+                            <option value="" disabled="disabled" selected="">Select an option</option>
+                            <option value="forenhiet"> Forenhiet </option>
+                            <option value="kelvin"> Kelvin </option>
+                            <option value="celcius"> Celcius </option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <p> Enter The Integer Here: </p>
+                    <input type="text" id="txt" class="p-form__control box" name="username-inline" required="" aria-describedby="exampleHelpTextMessage"/>
+                </div>
+                <div>
+                    <p> Result In: </p>
+                    <input type="text" id="txt2" class="p-form__control box" name="username-inline" required="" aria-describedby="exampleHelpTextMessage"/>
+                    <p id="data3"></p>
+                </div>
+            </div>
+            </div>
+        </form>
+        <div class="p-3">
+            <button id="btn" class="button btn btn-primary"> Convert Temperature </button>
+        </div>
+    </div>
+    <script>
+        const btn = document.querySelector('#btn');
+        const sb = document.querySelector('#framework');
+        const sb2 = document.querySelector('#framework2');
+        let data3 = document.getElementById("data3");
+        btn.onclick = (event) => {
+            event.preventDefault();
+            var data = sb.value;
+            var data2 = sb2.value;
+            let txt = document.getElementById("txt").value;
+            if (data === "forenhiet"){
+                let txt2 = document.getElementById("txt2");
+                let n=txt;
+                let n2=parseInt(n);
+                if(Number.isInteger(n2)){
+                    if (data2 === "celcius"){
+                        let txt3 = parseInt((txt));
+                        let num = (9/5)*(txt3)+32;
+                        let str2 = (Math.round(num)+"°F");
+                        txt2.value = str2;
+                        data3.textContent="";
+                        
+                    }
+                    else if(data2 === "kelvin"){
+                        let txt3 = (parseInt(txt) - 273.15) * 1.8 + 32
+                        let str2 = (Math.round(txt3)+"°F");
+                        txt2.value = str2;
+                        data3.textContent="";
+                    }
+                }
+                else if(isNaN(n2)){
+                    data3.textContent="Please fill the valid data";
+                    data3.style.color="red";
+                    data3.style.fontSize=20;
+                } 
+                else{
+                    data3.textContent="Please fill the valid data";
+                    data3.style.color="red";
+                    data3.style.fontSize=20;
+                }              
+
+            }
+            else if(data === "kelvin"){
+                let txt2 = document.getElementById("txt2");
+                txt2.value = data;
+                let n=txt;
+                let n2=parseInt(n);
+                if(Number.isInteger(n2)){
+                    if (data2 === "forenhiet"){
+                        let txt3 = (parseInt(txt));
+                        let num = (txt3 - 32) * 5/9 + 273.15;
+                        let str2 = (Math.round(num)+"°K");
+                        txt2.value = str2;
+                        data3.textContent="";
+                    }
+                    else if(data2 === "celcius"){
+                        let txt3 = (parseInt(txt) + 273.15);
+                        let str2 = (Math.round(txt3)+"°K");
+                        txt2.value = str2;
+                        data3.textContent="";
+                    }
+                }
+                else if(isNaN(n2)){
+                    data3.textContent="Please fill the valid data";
+                    data3.style.color="red";
+                    data3.style.fontSize=20;
+                } 
+                else{
+                    data3.textContent="Please fill the valid data";
+                    data3.style.color="red";
+                    data3.style.fontSize=20;
+                }               
+            }
+            else if(data === "celcius"){
+                let txt2 = document.getElementById("txt2");
+                txt2.value = data;
+                let n=txt;
+                let n2=parseInt(n);
+                if(Number.isInteger(n2)){
+                    if (data2 === "forenhiet"){
+                        let txt3 = (parseInt(txt));
+                        let num = ((txt3-32)*5)/9;
+                        let str2 = (Math.round(num)+"°C");
+                        txt2.value = str2;
+                        data3.textContent="";
+                    }
+                    else if(data2 === "kelvin"){
+                        let txt3 = (parseInt(txt) - 273.15);
+                        let str2 = (Math.round(txt3)+"°C");
+                        txt2.value = str2;
+                        data3.textContent="";
+                    }
+                }
+                else if(isNaN(n2)){
+                    data3.textContent="Please fill the valid data";
+                    data3.style.color="red";
+                    data3.style.fontSize=20;
+                } 
+                else{
+                    data3.textContent="Please fill the valid data";
+                    data3.style.color="red";
+                    data3.style.fontSize=20;
+                }               
+            }
+        };
+    </script>
+</body>
+</html>

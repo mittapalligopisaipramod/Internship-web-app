@@ -1,0 +1,179 @@
+body{
+    background-color: #ebeced;
+}
+.text {
+    color: #81dbdb;
+}
+
+.main-heading {
+    font-family: "Arial";
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.active {
+    font-family: "Arial";
+    font-weight: bold;
+}
+
+.car {
+    background-color: #ffffff;
+    border-radius: 21px;
+    width: 200px;
+    border-style: solid;
+    border-color: #91eded;
+    box-shadow: 5px 5px 5px #91eded;
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading2 {
+    color: #91eded;
+    font-weight: 500;
+}
+
+.align {
+    margin-left: auto;
+}
+
+.covid-heading {
+    font-family: "Arial";
+    font-size: 35px;
+    color: #38ebeb;
+    font-weight: bold;
+}
+
+.quotes {
+    font-family: "Arial";
+    font-size: 29px;
+    font-weight: bold;
+}
+
+.Home {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.paragraph {
+    font-family: "Arial";
+    font-weight: 500;
+    color: #aeb5b5;
+}
+
+.image {
+    width: 300px;
+    border-style: solid;
+    border-radius: 50px;
+    border-width: 0px;
+}
+
+.image2 {
+    width: 100%;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 0px;
+}
+
+.button {
+    height: 45px;
+    width: 150px;
+    border-radius: 19px;
+    background-color: #80baba;
+    color: #ffffff;
+    border-width: 0px;
+}
+
+.box {
+    margin-top: 80px;
+}
+
+.paragraph_covid {
+    font-family: "Arial";
+    font-weight: 500;
+}
+
+.button2 {
+    height: 45px;
+    width: 190px;
+    border-radius: 19px;
+    background-color: #80baba;
+    color: #ffffff;
+    border-width: 0px;
+}
+
+.h3 {
+    font-family: "Arial";
+    font-size: 40px;
+    color: #444a4a;
+    font-weight: bold;
+    
+}
+
+.h4 {
+    font-size: 30px;
+    font-family: "Roboto";
+    color: white;
+    text-align: center;
+}
+
+.p {
+    padding: 10px;
+}
+
+.image3 {
+    width: 150px;
+    margin-top: 21px;
+}
+
+.symtopms-heading {
+    font-family: "Arial";
+    font-size: 39px;
+    font-weight: bold;
+    color: #515454;
+}
+
+.symptoms-paragrpah {
+    font-family: "Arial";
+    font-size: 26px;
+    color: #606969;
+}
+
+.upper {
+    margin-top: 39px;
+}
+
+.image4 {
+    width: 100%;
+    margin-left: 10px;
+}
+
+.proper-heading {
+    font-family: "Arial";
+    font-size: 35px;
+    font-weight: bold;
+    color: #292926;
+}
+
+.proper-paragraph {
+    font-family: "Arial";
+    font-size: 20px;
+    color: #606969;
+}
+
+.box2 {
+    border-radius: 20px;
+}
+.box3{
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+}
+.box4{
+    background-color: white;
+}
+.heading3{
+    margin-left: 100px;
+}
